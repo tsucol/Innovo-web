@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContactCTA from "../components/ContactCTA";
+import ContactCTA from "../components/ContactWhatsAppCTA";
 import HoverCardButton from "../components/HoverCardButton";
 import HoverButton from "../components/HoverButton";
 import Image from "next/image";
