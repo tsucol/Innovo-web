@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ContactCTA from "../components/ContactWhatsAppCTA";
+import ContactCTA from "../components/ContactWhatsAppCTA_RealFix";
 import HoverButton from "../components/HoverButton";
 
 export default function AireAcondicionadoPage() {
