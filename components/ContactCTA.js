@@ -5,7 +5,7 @@ export default function ContactCTA() {
   return (
     <section style={{ textAlign: 'center', marginTop: '3rem' }}>
       <h2>¿Necesitás un presupuesto?</h2>
-      <p>Contactanos por WhatsApp.</p>
+      <p>Contactanos por WhatsApp. </p> 
       <a href="https://wa.me/59899318273" target="_blank" rel="noopener noreferrer">
         <button style={{
           marginTop: '1rem',
