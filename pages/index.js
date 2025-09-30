@@ -87,53 +87,69 @@ export default function HomePage() {
       </section>
 
 {/* Differentiation Section */}
-<section style={{ margin: '4rem 0', textAlign: 'center' }}>
-  <h2 style={{ fontSize: '1.8rem', fontWeight: '600', marginBottom: '1rem' }}>¿Por qué elegir Innovo?</h2>
+<section className="differentiation">
+  <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', textAlign: 'center' }}>
+    ¿Por qué elegir Innovo?
+  </h2>
 
-  <div style={{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: '2rem'
-  }}>
-    {/* Stamp on the left */}
-    <Image
-      src="/Innovo-certif.png"
-      alt="Sello Innovo"
-      width={160}
-      height={160}
-    />
+  <div className="diff-wrap">
+    {/* Stamp */}
+    <div className="stamp">
+      <Image src="/Innovo-certif.png" alt="Sello Innovo" width={160} height={160} />
+    </div>
 
     {/* Checklist */}
-    <ul style={{
-      listStyle: 'none',
-      padding: 0,
-      margin: 0,
-      textAlign: 'left',
-      lineHeight: '1.8'
-    }}>
-      <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        ✅ <span style={{ fontSize: '1.05rem', fontWeight: '600' }}>
-          Instalación certificada Innovo
-        </span>
-      </li>
-      <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        ✅ <span style={{ fontSize: '1.05rem', fontWeight: '600' }}>
-          Chequeo de instalación eléctrica
-        </span>
-      </li>
-      <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        ✅ <span style={{ fontSize: '1.05rem', fontWeight: '600' }}>
-          Seguridad y prolijidad en cada trabajo
-        </span>
-      </li>
-      <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        ✅ <span style={{ fontSize: '1.05rem', fontWeight: '600' }}>
-          Garantía en cada instalación
-        </span>
-      </li>
+    <ul className="checklist">
+      <li>✅ <span>Instalación certificada con sello Innovo</span></li>
+      <li>✅ <span>Chequeo de instalación eléctrica</span></li>
+      <li>✅ <span>Seguridad y prolijidad en cada trabajo</span></li>
+      <li>✅ <span>Garantía en cada instalación</span></li>
     </ul>
   </div>
+
+  <style jsx>{`
+    .diff-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+      line-height: 1.8;
+    }
+    .checklist li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .checklist li span {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    /* Mobile: stack, shrink seal, widen text */
+    @media (max-width: 640px) {
+      .diff-wrap {
+        flex-direction: column-reverse; /* checklist first, stamp below */
+        gap: 1rem;
+      }
+      .stamp :global(img) {
+        width: 120px !important;
+        height: 120px !important;
+      }
+      .checklist {
+        width: 100%;
+        max-width: 420px;
+      }
+      .checklist li span {
+        font-size: 1.1rem;
+      }
+    }
+  `}</style>
 </section>
 
       {/* SEO / Location Keywords */}
