@@ -86,6 +86,93 @@ export default function HomePage() {
         </HoverCardButton>
       </section>
 
+{/* Differentiation Section */}
+<section style={{ margin: '4rem 0', textAlign: 'center' }}>
+  <h2 style={{ fontSize: '1.8rem', fontWeight: '600', marginBottom: '1rem' }}>¿Por qué elegir Innovo?</h2>
+
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '2rem'
+  }}>
+    {/* Stamp on the left */}
+    <Image
+      src="/Innovo-certif.png"
+      alt="Sello Innovo"
+      width={160}
+      height={160}
+    />
+
+    {/* Checklist */}
+    <ul style={{
+      listStyle: 'none',
+      padding: 0,
+      margin: 0,
+      textAlign: 'left',
+      lineHeight: '1.8'
+    }}>
+      <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        ✅ <span style={{ fontSize: '1.05rem', fontWeight: '600' }}>
+          Instalación certificada Innovo
+        </span>
+      </li>
+      <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        ✅ <span style={{ fontSize: '1.05rem', fontWeight: '600' }}>
+          Chequeo de instalación eléctrica
+        </span>
+      </li>
+      <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        ✅ <span style={{ fontSize: '1.05rem', fontWeight: '600' }}>
+          Seguridad y prolijidad en cada trabajo
+        </span>
+      </li>
+      <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        ✅ <span style={{ fontSize: '1.05rem', fontWeight: '600' }}>
+          Garantía en cada instalación
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      {/* SEO / Location Keywords */}
+      <section style={{ margin: '2rem 0', textAlign: 'center', color: '#4b5563' }}>
+        <p>
+          Innovo: Instalación de aire acondicionado en Ciudad de la Costa, Atlántida y alrededores.
+        </p>
+      </section>
+
+      {/* Reviews / Testimonials */}
+<section style={{ margin:'4rem 0', textAlign:'center' }}>
+  <h2 style={{ fontSize:'1.5rem', marginBottom:'1.5rem' }}>Nuestros clientes opinan</h2>
+  <div style={{ display:'flex', flexDirection:'column', gap:'1.5rem', maxWidth:'600px', margin:'0 auto' }}>
+    <div style={{ background:'white', padding:'1rem', borderRadius:'8px', boxShadow:'0 2px 6px rgba(0,0,0,0.1)', textAlign:'left' }}>
+      ⭐⭐⭐⭐⭐ “Me instalaron el aire en pocas horas y dejaron todo funcionando perfecto, incluso limpiaron el lugar.” – Laura M.
+    </div>
+    <div style={{ background:'white', padding:'1rem', borderRadius:'8px', boxShadow:'0 2px 6px rgba(0,0,0,0.1)', textAlign:'left' }}>
+      ⭐⭐⭐⭐⭐ “Me revisaron la instalación eléctrica antes de montar el equipo, me dio mucha confianza.” – Andrés R.
+    </div>
+    <div style={{ background:'white', padding:'1rem', borderRadius:'8px', boxShadow:'0 2px 6px rgba(0,0,0,0.1)', textAlign:'left' }}>
+      ⭐⭐⭐⭐⭐ “El técnico me explicó cómo usar el control y el mantenimiento básico. Muy atentos.” – Silvia G.
+    </div>
+  </div>
+</section>
+
+      {/* Visual Proof - Real photos */}
+      <section style={{ margin: '4rem 0', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Nuestros Trabajos</h2>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: '1rem'
+        }}>
+          <Image src="/instalacion1.jpeg" alt="Instalación Innovo 1" width={400} height={250} style={{ borderRadius: '8px' }} />
+          <Image src="/instalacion2.jpeg" alt="Instalación Innovo 2" width={400} height={250} style={{ borderRadius: '8px' }} />
+          <Image src="/instalacion3.jpg" alt="Instalación Innovo 3" width={400} height={250} style={{ borderRadius: '8px' }} />
+        </div>
+      </section>
+
       <ContactCTA />
     </div>
   );
