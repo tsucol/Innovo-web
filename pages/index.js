@@ -100,7 +100,7 @@ export default function HomePage() {
 
     {/* Checklist */}
     <ul className="checklist">
-      <li>✅ <span>Instalación certificada con sello Innovo</span></li>
+      <li>✅ <span>Instalación certificada Innovo</span></li>
       <li>✅ <span>Chequeo de instalación eléctrica</span></li>
       <li>✅ <span>Seguridad y prolijidad en cada trabajo</span></li>
       <li>✅ <span>Garantía en cada instalación</span></li>
@@ -186,6 +186,9 @@ export default function HomePage() {
           <Image src="/instalacion1.jpeg" alt="Instalación Innovo 1" width={400} height={250} style={{ borderRadius: '8px' }} />
           <Image src="/instalacion2.jpeg" alt="Instalación Innovo 2" width={400} height={250} style={{ borderRadius: '8px' }} />
           <Image src="/instalacion3.jpg" alt="Instalación Innovo 3" width={400} height={250} style={{ borderRadius: '8px' }} />
+          <Image src="/instalacion4.jpeg" alt="Instalación Innovo 4" width={400} height={250} style={{ borderRadius: '8px' }} />
+          <Image src="/instalacion5.jpeg" alt="Instalación Innovo 5" width={400} height={250} style={{ borderRadius: '8px' }} />
+          <Image src="/instalaciones6.jpg" alt="Instalación Innovo 6" width={400} height={250} style={{ borderRadius: '8px' }} />
         </div>
       </section>
 

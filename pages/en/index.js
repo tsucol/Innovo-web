@@ -43,6 +43,26 @@ export default function HomePage() {
   }}>
     Electrical installations · AC · EV chargers · Repairs
   </p>
+  <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+  <Image 
+    src="/flag-uk.png" 
+    alt="English" 
+    width={48} 
+    height={32} 
+    style={{ display: 'block', margin: '0 auto 0.5rem' }}
+  />
+  <p 
+    style={{ 
+      fontSize: '1.5rem', 
+      lineHeight: '1.4', 
+      color: '#1f2937', 
+      margin: 0,
+      fontWeight: 600 
+    }}
+  >
+    English speaking Technician
+  </p>
+</div>
 </div>
 
 <div style={{
