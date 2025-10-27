@@ -191,11 +191,37 @@ export default function HomePage() {
           <Image src="/instalaciones6.jpg" alt="Instalación Innovo 6" width={400} height={250} style={{ borderRadius: '8px' }} />
         </div>
       </section>
+<div
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '1rem',
+  }}
+>
+  <a
+    href="https://www.facebook.com/profile.php?id=61581763284757"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image src="/facebook.svg" alt="Facebook" width={34} height={34} />
+  </a>
 
+  <a
+    href="https://www.instagram.com/innovoinstalaciones/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image src="/instagram.svg" alt="Instagram" width={34} height={34} />
+  </a>
+</div>
       <ContactCTA />
     </div>
   );
 }
+
 
 function ServiceCard({ icon, title, desc, hovered }) {
   return (

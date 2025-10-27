@@ -81,6 +81,32 @@ export default function HomePage() {
         <ServiceCard icon={<FaChargingStation />} title="EV Chargers" desc="We install home and business EV chargers with professional guidance." />
         <ServiceCard icon={<FaTools />} title="Other Services" desc="Sauna installation, refrigerator repair, and custom electrical solutions." />
       </section>
+      <div
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '1rem',
+  }}
+>
+  <a
+    href="https://www.facebook.com/profile.php?id=61581763284757"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image src="/facebook.svg" alt="Facebook" width={34} height={34} />
+  </a>
+
+  <a
+    href="https://www.instagram.com/innovoinstalaciones/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image src="/instagram.svg" alt="Instagram" width={34} height={34} />
+  </a>
+</div>
         <ContactCTA />
       
     </div>

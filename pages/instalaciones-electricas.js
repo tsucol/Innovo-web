@@ -65,7 +65,32 @@ export default function ElectricalInstallationsPage() {
           Galería próximamente...
         </div>
       </section>
+<div
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '1.5rem',
+    marginTop: '2rem',
+    marginBottom: '1rem',
+  }}
+>
+  <a
+    href="https://www.facebook.com/profile.php?id=61581763284757"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image src="/facebook.svg" alt="Facebook" width={34} height={34} />
+  </a>
 
+  <a
+    href="https://www.instagram.com/innovoinstalaciones/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image src="/instagram.svg" alt="Instagram" width={34} height={34} />
+  </a>
+</div>
       {/* WhatsApp CTA */}
       <ContactCTA />
     </div>
