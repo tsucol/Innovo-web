@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ContactCTA from "../components/ContactWhatsAppCTA_Final";
 import HoverCardButton from "../components/HoverCardButton";
 import HoverButton from "../components/HoverButton";
@@ -52,39 +52,44 @@ export default function HomePage() {
       </div>
 
       {/* Services grid */}
-      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
-        <HoverCardButton href="/instalaciones-electricas">
-          <ServiceCard
-            icon={<FaBolt />}
-            title="Instalaciones Eléctricas"
-            desc="Montaje y reparación de instalaciones eléctricas residenciales y comerciales."
-          />
-        </HoverCardButton>
+     <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+  <HoverCardButton href="/instalaciones-electricas">
+    <ServiceCard
+      icon={<FaBolt />}
+      title="Instalaciones Eléctricas"
+      desc="Montaje y reparación de instalaciones eléctricas residenciales y comerciales."
+    />
+  </HoverCardButton>
 
-        <HoverCardButton href="/aire-acondicionado">
-          <ServiceCard
-            icon={<FaSnowflake />}
-            title="Aire Acondicionado"
-            desc="Instalación, recarga y mantenimiento de aires acondicionados."
-          />
-        </HoverCardButton>
+  <HoverCardButton href="/aire-acondicionado">
+    <ServiceCard
+      icon={<FaSnowflake />}
+      title="Aire Acondicionado"
+      isPromo
+      promoMessages={[
+        "Instalación, recarga y mantenimiento de aires acondicionados.",
+        "*** PROMO ADENTRO ***",
+      ]}
+      cycleMs={4000}
+    />
+  </HoverCardButton>
 
-        <HoverCardButton href="/cargadores-electricos">
-          <ServiceCard
-            icon={<FaChargingStation />}
-            title="Cargadores para Autos Eléctricos"
-            desc="Instalación de cargadores y asesoramiento técnico."
-          />
-        </HoverCardButton>
+  <HoverCardButton href="/cargadores-electricos">
+    <ServiceCard
+      icon={<FaChargingStation />}
+      title="Cargadores para Autos Eléctricos"
+      desc="Instalación de cargadores y asesoramiento técnico."
+    />
+  </HoverCardButton>
 
-        <HoverCardButton href="/otros-servicios">
-          <ServiceCard
-            icon={<FaTools />}
-            title="Otros Servicios"
-            desc="Montaje de saunas, reparación de heladeras, y soluciones a medida."
-          />
-        </HoverCardButton>
-      </section>
+  <HoverCardButton href="/otros-servicios">
+    <ServiceCard
+      icon={<FaTools />}
+      title="Otros Servicios"
+      desc="Montaje de saunas, reparación de heladeras, y soluciones a medida."
+    />
+  </HoverCardButton>
+</section>
 
 {/* Differentiation Section */}
 <section className="differentiation">
@@ -223,22 +228,46 @@ export default function HomePage() {
 }
 
 
-function ServiceCard({ icon, title, desc, hovered }) {
+function ServiceCard({ icon, title, desc, isPromo = false, promoMessages = [], cycleMs = 4000, hovered }) {
+  const [i, setI] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!isPromo || promoMessages.length < 2) return;
+    const id = setInterval(() => setI((v) => (v + 1) % promoMessages.length), cycleMs);
+    return () => clearInterval(id);
+  }, [isPromo, promoMessages, cycleMs]);
+
+  const dynamicText = isPromo ? promoMessages[i] : desc;
+
   return (
-    <div style={{
-      backgroundColor: hovered ? '#f3f4f6' : 'white',
-      borderRadius: '8px',
-      padding: '1rem',
-      boxShadow: hovered
-        ? '0 6px 12px rgba(0,0,0,0.15)'
-        : '0 2px 6px rgba(0,0,0,0.1)',
-      transform: hovered ? 'scale(1.03)' : 'scale(1)',
-      transition: 'all 0.2s ease',
-      cursor: 'pointer'
-    }}>
+    <div
+      style={{
+        backgroundColor: hovered ? '#f3f4f6' : 'white',
+        borderRadius: '8px',
+        padding: '1rem',
+        boxShadow: hovered
+          ? '0 6px 12px rgba(0,0,0,0.15)'
+          : '0 2px 6px rgba(0,0,0,0.1)',
+        transform: hovered ? 'scale(1.03)' : 'scale(1)',
+        transition: 'all 0.2s ease',
+        cursor: 'pointer',
+        textAlign: 'center',
+      }}
+    >
       <div style={{ marginBottom: '0.5rem', color: '#0284c7' }}>{icon}</div>
       <h2>{title}</h2>
-      <p>{desc}</p>
+      <p
+        style={{
+          marginTop: '.35rem',
+          fontSize: dynamicText.includes('PROMO') ? '1.2rem' : '1rem',
+          fontWeight: dynamicText.includes('PROMO') ? '700' : 'normal',
+          color: dynamicText.includes('PROMO') ? '#0284c7' : '#111',
+          textAlign: dynamicText.includes('PROMO') ? 'center' : 'left',
+          letterSpacing: dynamicText.includes('PROMO') ? '1px' : 'normal',
+        }}
+      >
+        {dynamicText}
+      </p>
     </div>
   );
 }
