@@ -42,12 +42,44 @@ export default function ElectricalInstallationsPage() {
         </p>
         <ul style={{ textAlign: 'left', margin: '0 auto', maxWidth: '600px', marginBottom: '2rem' }}>
           <li>✔ Instalaciones eléctricas completas para obras nuevas</li>
+          <li>✔ Búsqueda y diagnóstico de fallas eléctricas</li>
           <li>✔ Reemplazo y reparación de cableado antiguo</li>
           <li>✔ Montaje de tableros eléctricos y diferenciales</li>
           <li>✔ Tomas, iluminación interior y exterior</li>
           <li>✔ Sistemas de puesta a tierra</li>
           <li>✔ Servicio de mantenimiento y urgencias</li>
         </ul>
+     <div
+  style={{
+    maxWidth: '600px',
+    margin: '0 auto 2.5rem',
+    backgroundColor: 'white',
+    borderRadius: '8px',
+    padding: '1.25rem',
+    boxShadow: '0 2px 6px rgba(0,0,0,0.08)',
+    textAlign: 'left'
+  }}
+>
+  <h2 style={{ fontSize: '1.2rem', marginBottom: '1rem', textAlign: 'center' }}>
+    Presupuestos y diagnóstico
+  </h2>
+
+  <p style={{ marginBottom: '0.75rem' }}>
+    ✔ Instalaciones eléctricas y reformas: <strong>según evaluación</strong>
+  </p>
+
+  <p style={{ marginBottom: '0.75rem' }}>
+    ✔ Búsqueda de fallas eléctricas: <strong>según tiempo y complejidad</strong>
+  </p>
+
+  <p style={{ marginBottom: '0.75rem' }}>
+    ✔ Se coordina visita técnica para revisar el problema y presupuestar correctamente
+  </p>
+
+  <p style={{ fontSize: '0.95rem', color: '#4b5563', marginTop: '1rem', textAlign: 'center' }}>
+    El costo final depende del tipo de falla, el acceso, el tiempo de diagnóstico y los materiales necesarios.
+  </p>
+</div>
       </section>
 
       {/* Gallery placeholder */}

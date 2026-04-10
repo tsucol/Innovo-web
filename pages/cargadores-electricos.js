@@ -47,6 +47,37 @@ export default function CargadoresElectricosPage() {
           <li>✔ Integración con sistemas solares (si aplica)</li>
           <li>✔ Certificación y puesta en marcha</li>
         </ul>
+        <div
+  style={{
+    maxWidth: '600px',
+    margin: '0 auto 2.5rem',
+    backgroundColor: 'white',
+    borderRadius: '8px',
+    padding: '1.25rem',
+    boxShadow: '0 2px 6px rgba(0,0,0,0.08)',
+    textAlign: 'left'
+  }}
+>
+  <h2 style={{ fontSize: '1.2rem', marginBottom: '1rem', textAlign: 'center' }}>
+    Precios orientativos
+  </h2>
+
+  <p style={{ marginBottom: '0.75rem' }}>
+    ✔ Instalación básica 16A: <strong>desde $4.000</strong>
+  </p>
+
+  <p style={{ marginBottom: '0.75rem' }}>
+    ✔ Instalación 32A / 7,4 kW: <strong>desde $10.000</strong>
+  </p>
+
+  <p style={{ marginBottom: '0.75rem' }}>
+    ✔ Otras configuraciones o trabajos especiales: <strong>según evaluación</strong>
+  </p>
+
+  <p style={{ fontSize: '0.95rem', color: '#4b5563', marginTop: '1rem', textAlign: 'center' }}>
+    El precio final depende de la distancias a tablero o contador, los materiales y la dificultad del trabajo.
+  </p>
+</div>
       </section>
 
       {/* Gallery placeholder */}
