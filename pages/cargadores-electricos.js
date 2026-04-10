@@ -5,6 +5,7 @@ import ContactCTA from "../components/ContactWhatsAppCTA_Final";
 import HoverButton from "../components/HoverButton";
 
 export default function CargadoresElectricosPage() {
+  const galleryImages = Array.from({ length: 15 }, (_, i) => `/ev${i + 1}.jpeg`);
   return (
     <div style={{ fontFamily: 'sans-serif', padding: '2rem', backgroundColor: '#f9fafb', color: '#1f2937', position: 'relative' }}>
       {/* Language flag */}
@@ -51,18 +52,25 @@ export default function CargadoresElectricosPage() {
       {/* Gallery placeholder */}
       <section style={{ maxWidth: '900px', margin: '2rem auto', textAlign: 'center' }}>
         <h2>Galería de instalaciones</h2>
-        <p style={{ marginBottom: '1rem' }}>Muy pronto podrás ver fotos de cargadores instalados por nuestro equipo.</p>
-        <div style={{
-          height: '200px',
-          backgroundColor: '#e5e7eb',
-          borderRadius: '8px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          color: '#6b7280'
-        }}>
-          Galería próximamente...
-        </div>
+       <div
+  style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+    gap: '1rem',
+    marginTop: '1rem',
+  }}
+>
+  {galleryImages.map((src, index) => (
+    <Image
+      key={index}
+      src={src}
+      alt={`Instalación cargador EV ${index + 1}`}
+      width={400}
+      height={250}
+      style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+    />
+  ))}
+</div>
       </section>
 <div
   style={{

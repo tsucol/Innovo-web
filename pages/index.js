@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FaBolt, FaSnowflake, FaChargingStation, FaTools, FaWhatsapp } from "react-icons/fa";
 
 export default function HomePage() {
+    const galleryImages = Array.from({ length: 26 }, (_, i) => `/instalacion${i + 1}.jpeg`);
   return (
     <div style={{ fontFamily: 'sans-serif', padding: '2rem', backgroundColor: '#f9fafb', color: '#1f2937', position: 'relative' }}>
       {/* Flag link */}
@@ -61,18 +62,13 @@ export default function HomePage() {
     />
   </HoverCardButton>
 
-  <HoverCardButton href="/aire-acondicionado">
-    <ServiceCard
-      icon={<FaSnowflake />}
-      title="Aire Acondicionado"
-      isPromo
-      promoMessages={[
-        "Instalación, recarga y mantenimiento de aires acondicionados.",
-        "*** PROMO ADENTRO ***",
-      ]}
-      cycleMs={4000}
-    />
-  </HoverCardButton>
+<HoverCardButton href="/aire-acondicionado">
+  <ServiceCard
+    icon={<FaSnowflake />}
+    title="Aire Acondicionado"
+    desc="Instalación, recarga y mantenimiento de aires acondicionados."
+  />
+</HoverCardButton>
 
   <HoverCardButton href="/cargadores-electricos">
     <ServiceCard
@@ -82,13 +78,6 @@ export default function HomePage() {
     />
   </HoverCardButton>
 
-  <HoverCardButton href="/otros-servicios">
-    <ServiceCard
-      icon={<FaTools />}
-      title="Otros Servicios"
-      desc="Montaje de saunas, reparación de heladeras, y soluciones a medida."
-    />
-  </HoverCardButton>
 </section>
 
 {/* Differentiation Section */}
@@ -181,21 +170,24 @@ export default function HomePage() {
 </section>
 
       {/* Visual Proof - Real photos */}
-      <section style={{ margin: '4rem 0', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Nuestros Trabajos</h2>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-          gap: '1rem'
-        }}>
-          <Image src="/instalacion1.jpeg" alt="Instalación Innovo 1" width={400} height={250} style={{ borderRadius: '8px' }} />
-          <Image src="/instalacion2.jpeg" alt="Instalación Innovo 2" width={400} height={250} style={{ borderRadius: '8px' }} />
-          <Image src="/instalacion3.jpg" alt="Instalación Innovo 3" width={400} height={250} style={{ borderRadius: '8px' }} />
-          <Image src="/instalacion4.jpeg" alt="Instalación Innovo 4" width={400} height={250} style={{ borderRadius: '8px' }} />
-          <Image src="/instalacion5.jpeg" alt="Instalación Innovo 5" width={400} height={250} style={{ borderRadius: '8px' }} />
-          <Image src="/instalaciones6.jpg" alt="Instalación Innovo 6" width={400} height={250} style={{ borderRadius: '8px' }} />
+             <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '1rem'
+          }}
+        >
+          {galleryImages.map((src, index) => (
+            <Image
+              key={index}
+              src={src}
+              alt={`Instalación Innovo ${index + 1}`}
+              width={400}
+              height={250}
+              style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+            />
+          ))}
         </div>
-      </section>
 <div
   style={{
     display: 'flex',
