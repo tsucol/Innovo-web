@@ -79,6 +79,26 @@ export default function HomePage() {
   </HoverCardButton>
 
 </section>
+<div style={{ textAlign: "center", marginTop: "2rem" }}>
+  <Link href="/carga-vehiculos-electricos">
+    <div
+      style={{
+        display: "inline-block",
+        padding: "0.9rem 1.4rem",
+        backgroundColor: "#0284c7",
+        color: "white",
+        borderRadius: "999px",
+        fontWeight: "600",
+        cursor: "pointer",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+        transition: "all 0.2s ease",
+      }}
+    >
+      👉 Guía completa de carga de autos eléctricos
+    </div>
+  </Link>
+</div>
+<div style={{ textAlign: "center", marginTop: "2rem", marginBottom: "2rem" }}></div>
 
 {/* Differentiation Section */}
 <section className="differentiation">
@@ -247,7 +267,16 @@ function ServiceCard({ icon, title, desc, isPromo = false, promoMessages = [], c
       }}
     >
       <div style={{ marginBottom: '0.5rem', color: '#0284c7' }}>{icon}</div>
-      <h2>{title}</h2>
+    <h2
+  style={{
+    fontSize: "1.4rem",
+    fontWeight: "800",
+    marginBottom: "0.4rem",
+    letterSpacing: "0.3px"
+  }}
+>
+  {title}
+</h2>
       <p
         style={{
           marginTop: '.35rem',

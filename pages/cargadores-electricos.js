@@ -79,7 +79,25 @@ export default function CargadoresElectricosPage() {
   </p>
 </div>
       </section>
-
+<div style={{ textAlign: "center", marginTop: "2rem" }}>
+  <Link href="/carga-vehiculos-electricos">
+    <div
+      style={{
+        display: "inline-block",
+        padding: "0.9rem 1.4rem",
+        backgroundColor: "#0284c7",
+        color: "white",
+        borderRadius: "999px",
+        fontWeight: "600",
+        cursor: "pointer",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+        transition: "all 0.2s ease",
+      }}
+    >
+      👉 Guía completa de carga de autos eléctricos
+    </div>
+  </Link>
+</div>
       {/* Gallery placeholder */}
       <section style={{ maxWidth: '900px', margin: '2rem auto', textAlign: 'center' }}>
         <h2>Galería de instalaciones</h2>
