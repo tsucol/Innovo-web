@@ -168,7 +168,7 @@ export default function CargaVehiculosElectricosPage() {
               a un wallbox fijo.
             </p>
             <Image
-  src="/instalacion3-tomai.jpeg"
+  src="/instalacion3-tomaI.jpeg"
   alt="Instalación toma industrial 32A"
   width={400}
   height={300}
